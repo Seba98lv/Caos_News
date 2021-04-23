@@ -1,268 +1,353 @@
+
 /*Cambiamos la fuente y color de los textos principales*/
 body { 
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    height: 100vh !important;
-    font-family: 'Noto sans', sans-serif;
-    color: #222222;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ height: 100vh !important;
+ font-family: 'Noto sans', sans-serif;
+ color: #222222;
 }
 
 /*Modificar el boton de (más información)*/
 .btn-rojo{
-    text-decoration: none;
-    color:white;
-    font: 0.8rem;
-    font-family: 'montserrat', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-color: #fb2056;
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    display: inline-block;
-
+ text-decoration: none;
+ color:white;
+ font: 0.8rem;
+ font-family: 'montserrat', sans-serif;
+ text-transform: uppercase;
+ font-weight: 700;
+ background-color: #eb0a0a;
+ padding: 1rem 2rem;
+ border-radius: 20px;
+ display: inline-block;
 /*Solo aplica para flexbox que sirve para dar mejor forma al diseño responsive*/
 
-    align-self: center;
+ align-self: center;
 }
 
+
+
 .frase{
-    text-align: center;
+ text-align: center;
 }
 
 /*Primera Seccion*/
 /*Agrega imagen de fondo*/
 #primera-seccion {
-    background: linear-gradient(rgba(172, 167, 147, 0.295), rgba(38,2,2,0.446)), url(/img/Noticia-Nacional/fondo.jpg) no-repeat center/cover;
-    background-attachment: fixed;
-    height: 100vh;
-    color: white;
+ background: linear-gradient(rgba(139, 138, 131, 0.295), rgba(34, 25, 25, 0.446)), url(/img/Noticia-Nacional/fondo.jpg) no-repeat center/cover;
+ background-attachment: fixed;
+ height: 100vh;
+ color: white;
 }
 /*Diseño en la barra de navegacion para la pagina principal*/
-#barra{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto 5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.menu{
+ flex-direction: row;
+ margin: auto 5rem;
+ padding-top: 2rem;
+ padding-bottom: 2rem;
 }
-
-/*posicionamos el logo*/
-#logo {
-    margin: 0;
+.container{
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
 }
-
+.container .btn-menu, .logo{
+    float: left;
+    line-height:80px; 
+}
+.container .btn-menu label{
+    color: rgb(17, 16, 16);
+    font-size: 30px;
+    cursor: pointer;
+}
+ 
+.logo{
+    line-height: 10px;
+}
 /*Diseño de textos en la barra de navegacion*/
 nav > a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
     text-decoration: none;
-    color: rgb(2, 2, 2);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
 }
 /*Marcar de blanco los textos al clickear*/
 nav >a:hover {
-    color: rgb(255, 255, 255);
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
 }
+
+
+/*Menù lateral*/
+#btn-menu{
+    display: none;
+}
+
+.menu{
+    padding-left: 100;
+    text-align: right;
+
+}
+
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
+
+
 /*Dar diseño a los textos de la primera seccion*/
 #primer-contenido{
-    margin-top: 8rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+ margin-top: 8rem;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
 }
 
 
 #primer-contenido > p {
-    text-transform: capitalize;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+ text-transform: capitalize;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 1.5rem;
+ margin-bottom: 0.5rem;
+ font-weight: bold;
 }
 
 /*Division de textos para dar un diseño a la interfaz*/
 #primer-contenido > hr {
-    width: 4.5rem;
-    border-color: #fb2056;
+ width: 4.5rem;
+ border-color: #eb0a0a;
 }
 
 #primer-contenido > h1 {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
+ font-family: 'Montserrat', sans-serif;
+ text-transform: uppercase;
+ font-size: 4rem;
+ font-weight: 700;
+ margin-bottom: 2.5rem;
 }
 /*Ordenar la interfaz de la segunda seccion*/
 #segunda-seccion {
-    background-color: #dfdfe6;
-    min-height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem;
+ background-color: #dfdfe6;
+ min-height: 10rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding: 3rem;
 }
 
 /*Ordenar la interfaz de la tercera seccion*/
 #tercera-seccion{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ width: 80%;
+ padding-top: 5rem;
+ padding-bottom: 5rem;
 }
 /*Centralizar texto y darle diseño*/
 #titulo {
-    margin-bottom: 2rem;
+ margin-bottom: 2rem;
 }
 
 #titulo > h2{
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
+ text-transform: uppercase;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 2.5rem;
+ font-weight: 700;
 }
 
 #titulo > hr {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
+ text-transform: uppercase;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 2.5rem;
+ font-weight: 700;
 }
 
 #titulo > hr {
-    width: 4.5rem;
-    border-color: #fb2056;
+ width: 4.5rem;
+ border-color: #eb0a0a;
 }
 
 /*Centralizar texto y boton de informacion*/
 #container-principal {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
 }
 
 /*Acomodar imagenes de noticias destacadas*/
 .img-destacados{
-    padding-right: 1rem;
-    padding-left: 1rem;
+ padding-right: 1rem;
+ padding-left: 1rem;
 }
 /*Juntar imagenes con sus respectivos textos*/
 .img-destacados > h6 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 1.3rem;
+ font-weight: 700;
+ margin-bottom: 1rem;
 }
 
 .img-destacados > p {
-    margin-bottom: 2rem;
+ margin-bottom: 2rem;
 }
 
 .img-destacados > img{
-    max-width: 100%;
+ max-width: 100%;
 }
 
 /*Agregamos fondo transparente en la cuarta seccion donde encontramos noticias nacionales*/
 #cuarta-seccion{
-    background: linear-gradient(rgba(116, 122, 122, 0.35), rgba(145, 132, 132, 0.446)), url(/img/Secciones/fondo2.jpg) no-repeat center/cover;
-    background-attachment: fixed;
-    height: 100vh;
-    color: white;  
-    display: flex;
-    flex-direction: column;  
+ background: linear-gradient(rgba(62, 65, 65, 0.35), rgba(48, 46, 46, 0.446)), url(/img/Secciones/fondo2.jpg) no-repeat center/cover;
+ background-attachment: fixed;
+ height: 100vh;
+ color: white;  
+ display: flex;
+ flex-direction: column;  
 }
 /*Ordenad textos en la cuarta seccion*/
 #contenedor {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
+ width: 80%;
+ margin: auto;
+ display: flex;
+ flex-direction: row;
 }
 
 
 /*Cambiar de posicion los textos y intregrar diseño*/
 .mitad{
-    width: 50%;
+ width: 50%;
 }
 
 #cuarta-seccion-der > h3{
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    color: black;
-    
+ text-transform: uppercase;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 2.5rem;
+ font-weight: 700;
+ margin-bottom: 1.5rem;
+ text-decoration: none;
+ color: rgb(255, 255, 255);
+ 
 }
 
 #cuarta-seccion-der > hr{
-    width: 4.5rem;
-    border-color: #000000;
-    margin-left: 0;
-    margin-bottom: 3rem;
+ width: 4.5rem;
+ border-color: #eb0a0a;
+ margin-left: 0;
+ margin-bottom: 3rem;
 }
 
 
 #cuarta-seccion-der > p{
-    margin-bottom: 4rem;
-    text-decoration: none;
-    color: black;
-    font-weight: 700;
+ margin-bottom: 4rem;
+ text-decoration: none;
+ color: rgb(255, 255, 255);
+ font-weight: 700;
 }
 
 /*Ordenando y centralizando textos e imagenes quinta seccion*/
 #quinta-seccion {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+ width: 80%;
+ margin: auto;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ padding-top: 5rem;
+ padding-bottom: 5rem;
 }
 
 #quinta-seccion-izq {
-    flex: 1;
+ flex: 1;
 }
 
 #quinta-seccion-izq > h3 {
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+ text-transform: uppercase;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 2.5rem;
+ font-weight: 700;
+ margin-bottom: 1.5rem;
 }
 
 #quinta-seccion-izq > p {
-    margin-bottom: 4rem;
+ margin-bottom: 4rem;
 }
 
 #quinta-seccion-der {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px 10px;
-    justify-items: center;
-    align-items: center;
+ flex: 2;
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ gap: 10px 10px;
+ justify-items: center;
+ align-items: center;
 }
 
 #quinta-seccion-der > img {
-    max-width: 100%;
+ max-width: 100%;
 }
 
 
 #quinta-seccion-izq > hr {
-    width: 4.5rem;
-    border-color: #0051ff;
-    margin-left: 0;
-    margin-bottom: 3rem;
+ width: 4.5rem;
+ border-color: #eb0a0a;
+ margin-left: 0;
+ margin-bottom: 3rem;
 }
 
 
@@ -270,127 +355,148 @@ nav >a:hover {
 /*Footer*/
 
 footer{
-    width: 100%;
-    background: #202020;
-    color: white;   
-    
+ width: 100%;
+ background: #202020;
+ color: white;   
+ 
 }
 
 .container-footer{
-    width: 100%;  
-    background: #101010;
+ width: 100%;  
+ background: #101010;
 }
 
 .footer{
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;  
-    padding: 20px;
+ max-width: 1200px;
+ margin: auto;
+ display: flex;
+ justify-content: space-between;  
+ padding: 20px;
 }
 
 .copyright{
-    color: #C7C7C7;
+ color: #C7C7C7;
 }
 
 .copyright a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+ text-decoration: none;
+ color: white;
+ font-weight: bold;
 }
 
 .information a{
-    text-decoration: none;
-    color: #C7C7C7;
+ text-decoration: none;
+ color: #C7C7C7;
 }
 /*Ordenamos la interfaz para aplicaciones moviles- Primera Seccion*/
 @media(max-width:522px){
-    #primera-seccion {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+ #primera-seccion {
+     padding-left: 1rem;
+     padding-right: 1rem;
+ }
 
-    #barra{ 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto;
-        padding-top:  2rem;
-        padding-bottom: 0;
-    }
+ .menu{ 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: auto;
+     padding-top:  0rem;
+     padding-bottom: 0;
+ }
 
-    #barra > p,
-    nav {
-        text-align: center;
-    }
+ #barra > p,
+ nav {
+     text-align: center;
+ }
 
-    #primer-contenido{
-        margin-top: 2.5rem;
-    }
+ #primer-contenido{
+     margin-top: 2.0rem;
+ }
 
-    #primer-contenido > h1{
-        font-size: 2.5rem;
-    }
+ #primer-contenido > h1{
+     font-size: 2.0rem;
+ }
 
 /*tercera seccion*/
 
-    #tercera-seccion {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        width: 90%;
-    }
+ #tercera-seccion {
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+     width: 90%;
+ }
 
-    #container-principal {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+ #container-principal {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
 
 .img-destacados {
-    margin-bottom: 2rem;
+ margin-bottom: 2rem;
 }
 
 .img-destacados > img {
-    max-width: 100%;
+ max-width: 100%;
 }
 
 /*Cuarta seccion*/
 /*Con esto haremos que toda la parte izquierda no se vea y que nuestro lado derecho ocupe su lugar en app movil*/
 #cuarta-seccion-izq {
-    display: none;
-    
+ display: none;
+ 
 }
 
 #cuarta-seccion-der {
-    width: 100%;
+ width: 100%;
 }
 
 /*Quinta Seccion*/
 
 #quinta-seccion {
-    width: 80%;
-    margin: 2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+ width: 80%;
+ margin: 2rem;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ padding-top: 2rem;
+ padding-bottom: 2rem;
 }
 
 #quinta-seccion-der {
-    flex: 1;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr;
-    gap: 10px 10px;
-    justify-items: center;
-    align-items: center;
+ flex: 1;
+ display: grid;
+ grid-template-rows: repeat(4, 1fr);
+ grid-template-columns: 1fr;
+ gap: 10px 10px;
+ justify-items: center;
+ align-items: center;
 }
 
 #quinta-seccion-izq > h3 {
-    font-size: 1.5rem;
+ font-size: 1.5rem;
 }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
