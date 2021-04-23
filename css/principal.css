@@ -33,7 +33,7 @@ body {
 /*Primera Seccion*/
 /*Agrega imagen de fondo*/
 #primera-seccion {
-    background: linear-gradient(rgba(247, 202, 2, 0.295), rgba(38,2,2,0.446)), url(/img/Secciones/fondo.jpg) no-repeat center/cover;
+    background: linear-gradient(rgba(172, 167, 147, 0.295), rgba(38,2,2,0.446)), url(/img/Noticia-Nacional/fondo.jpg) no-repeat center/cover;
     background-attachment: fixed;
     height: 100vh;
     color: white;
@@ -96,7 +96,7 @@ nav >a:hover {
 }
 /*Ordenar la interfaz de la segunda seccion*/
 #segunda-seccion {
-    background-color: #f4f5f9;
+    background-color: #dfdfe6;
     min-height: 10rem;
     display: flex;
     flex-direction: column;
@@ -265,7 +265,44 @@ nav >a:hover {
     margin-bottom: 3rem;
 }
 
+
+
 /*Footer*/
+
+footer{
+    width: 100%;
+    background: #202020;
+    color: white;   
+    
+}
+
+.container-footer{
+    width: 100%;  
+    background: #101010;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
 /*Ordenamos la interfaz para aplicaciones moviles- Primera Seccion*/
 @media(max-width:522px){
     #primera-seccion {
@@ -322,6 +359,7 @@ nav >a:hover {
 /*Con esto haremos que toda la parte izquierda no se vea y que nuestro lado derecho ocupe su lugar en app movil*/
 #cuarta-seccion-izq {
     display: none;
+    
 }
 
 #cuarta-seccion-der {
@@ -353,7 +391,6 @@ nav >a:hover {
 #quinta-seccion-izq > h3 {
     font-size: 1.5rem;
 }
-
 
 
 }

@@ -1,0 +1,44 @@
+/*Cambiamos la fuente y color de los textos principales*/
+body { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh !important;
+    font-family: 'Noto sans', sans-serif;
+    color: #222222;
+}
+
+/*Primera Seccion*/
+/*Agrega imagen de fondo*/
+#primera-seccion {
+    background: linear-gradient(rgba(247, 202, 2, 0.295), rgba(38,2,2,0.446)), url(/img/Noticia-Nacional/fondo.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+}
+/*Diseño en la barra de navegacion para la pagina principal*/
+#barra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/*posicionamos el logo*/
+#logo {
+    margin: 0;
+}
+
+/*Diseño de textos en la barra de navegacion*/
+nav > a{
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/*Marcar de blanco los textos al clickear*/
+nav >a:hover {
+    color: rgb(255, 255, 255);
+}
