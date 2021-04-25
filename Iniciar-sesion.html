@@ -15,15 +15,15 @@
   <body>
 
  
-
+<header>
 <!--Barra de navegacion-->
-<div id="primera-seccion">
+<div id="principal">
     <div class="container">
     <div class="btn-menu">
       <label for="btn-menu">☰</label>
     </div>
     <div class="logo">
-      <h1><a href="index.html"><img src="img/Logo/Logo Caos News 2.0.png" alt="200" width="200" height="130" ></h1></a>
+      <h1><a href="Principal.html"><img src="img/Logo/Logo Caos News 2.0.png" alt="200" width="150" height="130" ></h1></a>
     </div>
     <nav class="menu">
       <div class="social-networks">
@@ -32,11 +32,11 @@
         <a href="https://www.youtube.com" class="youtube"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a>
     </div>
-        <a href="index.html">Inicio</a>
+        <a href="Principal.html">Inicio</a>
         <a href="#">Nacional</a>
         <a href="#">Internacional</a>
         <a href="#">Deportes</a>
-        <a href="#">Contacto</a>  
+
       </div>   
       </nav>
       
@@ -52,38 +52,55 @@
   </div>
 
 
-    <!--inicio de sesion-->
-    <div class="login-box">
-        <img src="img/Logo/inicio.png" alt="400" width="200" height="50" class="avatar">
-        <h1>Iniciar sesión</h1>
-        <form>
-          <!-- Usuario-->
-          <label for="username">Usuario</label>
-          <input type="text">
-          <!-- Contraseña -->
-          <label for="password">Contraseña</label>
-          <input type="password">
-          <input type="submit" value="Iniciar Sesión">
-          <a href="#">¿No recuerdas tu contraseña?</a><br>
-          <a href="#">¿Aun no tienes una cuenta?</a>
-        </form>
-      </div>
- 
-
-
-
+  </header>
 
   <main>
- 
+ <!--inicio de sesion-->
+ <div id=login>
+  <div class="login-box">
+      <img src="img/Logo/inicio.png" alt="400" width="200" height="50" class="avatar">
+      <h1>Iniciar sesión</h1>
+      <form>
+        <!-- Usuario-->
+        <label for="username">Usuario </label>
+        <input type="text" placeholder="Usuario">
+        <!-- Contraseña -->
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="Contraseña">
+        <input type="submit" value="Iniciar Sesión">
+        <a href="#">¿No recuerdas tu contraseña?</a><br>
+        <a href="#">¿Aun no tienes una cuenta?</a>
+      </form>
+    </div>
+  </div>
+
     
     
          
 </main>
 
- 
- </footer>
+  <!--El pie de la pagina para agregar contactos y derechos reservados-->
+ <footer>
+   
+  <div class="container-footer">
+         <div class="footer">
+              <div class="copyright">
+                  © 2021 Todos los Derechos Reservados | <a href="">Seba98lv</a>
+              </div>
+
+              <div class="informacion">
+                   Valparaiso, Chile | Telefono: 600-800-400 | <a href="mailto:Caosnews@gmail.com">Caosnews@gmail.com</a>
+              </div>
+          </div>
+
+      </div>
+
+      
+</footer>
  
 
 </body>
+
+ 
 
 </html>

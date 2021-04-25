@@ -432,7 +432,9 @@ footer{
      padding-right: 1rem;
  }
 
- 
+ .logo{
+     align-items: baseline;
+ }
 
  .menu{ 
      display: flex;
