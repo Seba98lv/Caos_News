@@ -32,6 +32,3 @@ PAGINA REGISTRAR
 -Faltan funciones con javascript (Estudiando)
 -Ajustado para celular (En Proceso)
 
-
-
-
