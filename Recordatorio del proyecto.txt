@@ -1,0 +1,37 @@
+Trabajo realizado solo con HTML Y CSS (por el momento)
+-Contiene scripts con iconos
+
+FUNCIONES EN GENERAL QUE COMPARTEN LAS PAGINAS
+-Paginas conectadas entre ellas: Principal- Deportes- iniciar sesion (Se encuentra en el menu lateral)
+-enlaces de redes sociales conectadas con las paginas activas
+-Al cliquear el logo de la pagina esta lo llevara al inicio de la pagina
+-Menu lateral que se encuentra cerca del logo donde se encuentra: Iniciar Sesión y Registrar (por el momento)
+
+PAGINA PRINCIPAL
+-Interfaz editable (Faltan algunas funciones)
+-Menu Lateral Izquierdo
+-Ajustado para celular
+-Falta pagina de mas informacion
+-Falta crear paginas de destacados
+-Falta pagina Internacional
+-Falta pagina Nacional
+-Falta pagina de registar(Se encuentra en el menu lateral)
+
+
+PAGINA INICIAR SESION
+-Interfaz completa
+-Faltan funciones con javascript (Estudiando)
+-Ajustado para celular (En proceso)
+
+
+PAGINA Deportes
+-Falta completar interfaz (Proceso)
+
+PAGINA REGISTRAR
+-Interfaz completa
+-Faltan funciones con javascript (Estudiando)
+-Ajustado para celular (En Proceso)
+
+
+
+

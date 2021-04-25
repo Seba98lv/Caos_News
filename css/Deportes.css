@@ -3,9 +3,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(179, 177, 166, 0.295), rgba(34, 25, 25, 0.446)), url(/img/Secciones/fondo.jpg) no-repeat center/cover;
+    background: linear-gradient(rgba(179, 177, 166, 0.295), rgba(34, 25, 25, 0.446)), url(/img/Secciones/Fondo3.jpg) no-repeat center/cover;
     font-family: sans-serif;
-    height: 100vh;
+    height: 700vh;
   }
 
 
@@ -32,14 +32,14 @@ body {
        line-height:172px; 
    }
    .container .btn-menu label{
-       color: rgb(0, 0, 0);
+       color: rgb(14, 13, 13);
        font-size: 40px;
        cursor: pointer;
        top: 10;
    }
     
    .logo{
-       line-height: 10px;
+       line-height: 100px;
    }
    /*Diseño de textos en la barra de navegacion*/
    nav > a{
@@ -160,171 +160,70 @@ body {
 }
 
 
-
-/*Diseñamos la forma de nuestro inicio con su fondo*/
-  .Iniciar-box {
-    width: 320px;
-    height: 420px;
-    background: #000;
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-  }
-  /*Modificamos el avatar a nuestra manera dandole forma en bordes*/
-  .Iniciar-box .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border-color: rgb(8, 8, 8);
-    border-style: solid;
-    position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
+.container2{
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
   }
   
-  .Iniciar-box h1 {
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
+  
+  .item{
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+    
+    transition: all 300ms;
+    
+    position: relative;
   }
   
-  .Iniciar-box label {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
+  
+  .item::after {
+    content: "";
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    opacity: 0;
+  }
+  
+  .item:hover:after{
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+  }
+  
+  .item-text{
+    padding: 1em;
+  }
+  
+  
+  .item-img{
+    max-width: 100%;
     display: block;
   }
   
-  .Iniciar-box input {
-    width: 100%;
-    margin-bottom: 20px;
-  }
   
-  .Iniciar-box input[type="text"], .Iniciar-box input[type="password"] {
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    font-size: 16px;
-  }
+  @media screen and (min-width: 590px) {
+    
+    .container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
   
-  .Iniciar-box input[type="submit"] {
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #ffc107;
-    color: #000;
-    font-size: 18px;
-    border-radius: 20px;
   }
-  
-  .Iniciar-box input[type="submit"]:hover {
-    cursor: pointer;
-    background: #ffc107;
-    color: #fff;
-  }
-  
-  .Iniciar-box a {
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: rgb(255, 255, 255);
-    cursor:pointer;
-    color: #ffc107;
-  }
-  
-  .Iniciar-box a:hover {
-    color: #fff;
-  }
-
-  /*Footer*/
-
-footer{
-  width: 100%;
-  background: #202020;
-  color: white;  
-  
- }
- 
- .container-footer{
-  width: 100%; 
-  height: 25%;
-  background: #101010;
-  position: fixed; 
- }
- 
- .footer{
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;  
-  padding: 20px;
- }
- 
- .copyright{
-  color: #f1f1f1;
- }
- 
- .copyright a{
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
- }
- 
- .informacion a{
-  text-decoration: none;
-  color: #e4dede;
-  font-weight: bold;
-  text-align: left;
- }
-
- /*Ordenamos la interfaz para aplicaciones moviles- Primera Seccion*/
-@media(max-width:522px){
-
-  header{
-    width: 100%;
-    height: 90%;
-  }
-
-
-  #principal {
-      padding-left: 1rem;
-      padding-right: 1rem;
-  }
- 
-  .menu{  
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      padding-top:  0rem;
-      padding-bottom: 0;
-  }
- 
-  .menu > p, nav {
-      text-align: center;
-  }
-
-
-.login-box {
-  width: 60%;
-  margin-top: 2rem;
-
-}
-
-
-.footer{
-  width: 120%;
-  height: 50%;
-}
-
-
-
-}
+   
